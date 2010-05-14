@@ -1,0 +1,60 @@
+#!/bin/sh
+
+### BEGIN INIT INFO
+# Provides:          pidgin-ppa
+# Required-Start:    $remote_fs
+# Required-Stop:     $remote_fs
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Configure the Pidgin PPA at boot.
+# Description:       This script configures the Pidgin PPA on boot to handle
+#                    distribution upgrades.
+### END INIT INFO
+
+NAME=pidgin-ppa
+LONG_NAME="Pidgin PPA"
+
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+# Get LSB functions
+[ -r /lib/lsb/init-functions ] && . /lib/lsb/init-functions
+[ -r /etc/default/rcS ] && . /etc/default/rcS
+
+configure_ppa()
+{
+    # Make sure the package is still installed.
+    # If it's been removed but not purged, this init script will still exist.
+    if ! dpkg-query -W -f='${Status}\n' $NAME 2>&1 | grep -q "^install ok installed"
+    then
+        exit 0
+    fi
+
+    log_daemon_msg "Configuring the $LONG_NAME"
+    dpkg-reconfigure -fnoninteractive $NAME >/dev/null
+    STATUS=$?
+    log_end_msg $STATUS
+    exit $STATUS
+}
+
+case "$1" in
+    start)
+        configure_ppa
+        ;;
+    stop)
+        ;;
+    restart)
+        configure_ppa
+        ;;
+    force-reload)
+        configure_ppa
+        ;;
+    status)
+        echo $N runs at boot to configure the $NAME package.
+        exit 4
+        ;;
+    *)
+        N=/etc/init.d/$NAME
+        echo "Usage: $N {start|stop|restart|force-reload|status}" >&2
+        exit 1
+        ;;
+esac

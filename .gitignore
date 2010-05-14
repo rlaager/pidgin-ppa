@@ -1,0 +1,11 @@
+*.bak
+*.old
+*.orig
+*.rej
+.*.swp
+._*
+.DS_Store
+build-stamp
+build-arch-stamp
+build-indep-stamp
+configure-stamp

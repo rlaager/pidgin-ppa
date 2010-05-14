@@ -1,0 +1,17 @@
+Source: pidgin-ppa
+Section: net
+Priority: extra
+Maintainer: Richard Laager <rlaager@pidgin.im>
+Build-Depends: debhelper (>= 7.0.50~)
+Standards-Version: 3.8.4
+Homepage: http://pidgin.im/download/ubuntu
+Vcs-Git: ssh://mtn.pidgin.im/srv/git/pidgin-ppa
+
+Package: pidgin-ppa
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, pidgin | finch
+Description: Pidgin PPA
+ This package configures the Pidgin PPA to provide you with updated versions of
+ Pidgin and Finch as well as their underlying libraries libpurple and libgnt.
+ These packages are provided by the Pidgin project and are not supported by
+ Ubuntu or Canonical.
