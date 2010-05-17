@@ -1,10 +1,11 @@
 #!/bin/sh -e
+# vim: ai ts=4 sts=4 et sw=4
 
 if [ "$1" = "configure" ]; then
-	apt-key add /usr/share/pidgin-ppa/pidgin-ppa.asc
-	. /etc/lsb-release
-	echo deb http://ppa.launchpad.net/pidgin-developers/ppa/ubuntu \
-	     $DISTRIB_CODENAME main > /etc/apt/sources.list.d/pidgin-ppa.list
+    apt-key add /usr/share/pidgin-ppa/pidgin-ppa.asc
+    . /etc/lsb-release
+    echo deb http://ppa.launchpad.net/pidgin-developers/ppa/ubuntu \
+         $DISTRIB_CODENAME main > /etc/apt/sources.list.d/pidgin-ppa.list
 fi
 
 #DEBHELPER#
