@@ -12,6 +12,27 @@ if [ "$1" = "configure" ]; then
     . /etc/lsb-release
     case $DISTRIB_ID in
         Ubuntu)
+            # No mapping necessary.
+            ;;
+        LinuxMint)
+            case $DISTRIB_RELEASE in
+                9)
+                    DISTRIB_CODENAME=lucid
+                    ;;
+                8)
+                    DISTRIB_CODENAME=karmic
+                    ;;
+                7)
+                    DISTRIB_CODENAME=jaunty
+                    ;;
+                5)
+                    DISTRIB_CODENAME=hardy
+                    ;;
+                *)
+                    # Unsupported
+                    exit 0
+                    ;;
+            esac
             ;;
         *)
             # Unsupported
