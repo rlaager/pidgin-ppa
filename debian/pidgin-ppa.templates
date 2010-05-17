@@ -1,0 +1,11 @@
+Template: pidgin-ppa/unsupported_distro
+Type: note
+Description: Unsupported distribution
+ The pidgin-ppa package only supports Ubuntu.
+ .
+ You should either contact ${DISTRIB_ID} support about newer versions of
+ Pidgin or compile Pidgin from source.
+ .
+ If ${DISTRIB_ID} is binary compatible with Ubuntu, please use the
+ support@pidgin.im mailing list to help develop a mapping table between
+ ${DISTRIB_ID} releases and the underlying Ubuntu releases.
