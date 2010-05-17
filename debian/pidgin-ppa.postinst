@@ -4,8 +4,19 @@
 if [ "$1" = "configure" ]; then
     apt-key add /usr/share/pidgin-ppa/pidgin-ppa.asc
     . /etc/lsb-release
+
+    # If the user has source downloads setup for anything, including this PPA,
+    # set them up here.
+    grep -q "^deb-src" /etc/apt/sources.list \
+                       /etc/apt/sources.list.d/*.list 2>/dev/null
+    SRC=$?
+
     echo deb http://ppa.launchpad.net/pidgin-developers/ppa/ubuntu \
          $DISTRIB_CODENAME main > /etc/apt/sources.list.d/pidgin-ppa.list
+    if [ "$SRC" = "0" ]; then
+        echo deb-src http://ppa.launchpad.net/pidgin-developers/ppa/ubuntu \
+             $DISTRIB_CODENAME main >> /etc/apt/sources.list.d/pidgin-ppa.list
+    fi
 fi
 
 #DEBHELPER#
