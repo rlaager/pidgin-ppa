@@ -1,3 +1,9 @@
+pidgin-ppa (0.0.3) lucid; urgency=low
+
+  * Properly deal with systems without existing deb-src lines
+
+ -- Richard Laager <rlaager@wiktel.com>  Thu, 01 Jul 2010 23:53:03 -0500
+
 pidgin-ppa (0.0.2) lucid; urgency=low
 
   * Add deb-src lines when appropriate.
