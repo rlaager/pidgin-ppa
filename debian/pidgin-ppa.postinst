@@ -44,13 +44,16 @@ if [ "$1" = "configure" ]; then
 
     # If the user has source downloads setup for anything, including this PPA,
     # set them up here.
-    grep -q "^deb-src" /etc/apt/sources.list \
-                       /etc/apt/sources.list.d/*.list 2>/dev/null
-    SRC=$?
+    if grep -q "^deb-src" /etc/apt/sources.list \
+                          /etc/apt/sources.list.d/*.list 2>/dev/null; then
+        SRC=1
+    else
+        SRC=0
+    fi
 
     echo deb http://ppa.launchpad.net/pidgin-developers/ppa/ubuntu \
          $DISTRIB_CODENAME main > /etc/apt/sources.list.d/pidgin-ppa.list
-    if [ "$SRC" = "0" ]; then
+    if [ "$SRC" = "1" ]; then
         echo deb-src http://ppa.launchpad.net/pidgin-developers/ppa/ubuntu \
              $DISTRIB_CODENAME main >> /etc/apt/sources.list.d/pidgin-ppa.list
     fi
