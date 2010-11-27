@@ -1,8 +1,14 @@
+pidgin-ppa (0.0.4) natty; urgency=low
+
+  * Support Linux Mint 10 (and the future 11)
+
+ -- Richard Laager <rlaager@pidgin.im>  Fri, 26 Nov 2010 21:31:22 -0600
+
 pidgin-ppa (0.0.3) lucid; urgency=low
 
   * Properly deal with systems without existing deb-src lines
 
- -- Richard Laager <rlaager@wiktel.com>  Thu, 01 Jul 2010 23:53:03 -0500
+ -- Richard Laager <rlaager@pidgin.im>  Thu, 01 Jul 2010 23:53:03 -0500
 
 pidgin-ppa (0.0.2) lucid; urgency=low
 
@@ -10,10 +16,10 @@ pidgin-ppa (0.0.2) lucid; urgency=low
   * Support Linux Mint by mapping to the underlying Ubuntu release.
   * Use debconf to warn users running unsupported (versions of) distributions.
 
- -- Richard Laager <rlaager@wiktel.com>  Mon, 17 May 2010 13:03:28 -0500
+ -- Richard Laager <rlaager@pidgin.im>  Mon, 17 May 2010 13:03:28 -0500
 
 pidgin-ppa (0.0.1) lucid; urgency=low
 
   * Initial release
 
- -- Richard Laager <rlaager@wiktel.com>  Thu, 13 May 2010 19:51:57 -0500
+ -- Richard Laager <rlaager@pidgin.im>  Thu, 13 May 2010 19:51:57 -0500
