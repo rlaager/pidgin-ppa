@@ -16,6 +16,12 @@ if [ "$1" = "configure" ]; then
             ;;
         LinuxMint)
             case $DISTRIB_RELEASE in
+                11)
+                    DISTRIB_CODENAME=natty
+                    ;;
+                10)
+                    DISTRIB_CODENAME=maverick
+                    ;;
                 9)
                     DISTRIB_CODENAME=lucid
                     ;;
