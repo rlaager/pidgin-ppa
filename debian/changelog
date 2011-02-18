@@ -1,3 +1,9 @@
+pidgin-ppa (0.0.5) natty; urgency=low
+
+  * Correct LinuxMint 10 & 11 support
+
+ -- Richard Laager <rlaager@wiktel.com>  Thu, 17 Feb 2011 20:11:49 -0600
+
 pidgin-ppa (0.0.4) natty; urgency=low
 
   * Support Linux Mint 10 (and the future 11)
