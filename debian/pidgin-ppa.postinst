@@ -25,15 +25,6 @@ if [ "$1" = "configure" ]; then
                 9)
                     DISTRIB_CODENAME=lucid
                     ;;
-                8)
-                    DISTRIB_CODENAME=karmic
-                    ;;
-                7)
-                    DISTRIB_CODENAME=jaunty
-                    ;;
-                5)
-                    DISTRIB_CODENAME=hardy
-                    ;;
                 *)
                     # Unsupported
                     exit 0
