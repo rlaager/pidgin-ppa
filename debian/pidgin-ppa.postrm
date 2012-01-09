@@ -2,7 +2,7 @@
 # vim: ai ts=4 sts=4 et sw=4
 
 if [ "$1" = "remove" ]; then
-    apt-key del 67265EB522BDD6B1C69E66ED7FB8BEE0A1F196A8
+    apt-key del 67265EB522BDD6B1C69E66ED7FB8BEE0A1F196A8 >/dev/null 2>&1 || true
     rm -f /etc/apt/sources.list.d/pidgin-ppa.list
 fi
 
