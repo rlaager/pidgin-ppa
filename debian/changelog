@@ -1,3 +1,13 @@
+pidgin-ppa (0.0.6) natty; urgency=low
+
+  * Ignore errors removing the PPA key on uninstall
+  * Point Vcs-Git and Vcs-Browser to github
+  * Update Standards-Version to 3.9.1 (no changes)
+  * Drop support for Linux Mint < 9
+  * Support Linux Mint 12 (and the future 13)
+
+ -- Richard Laager <rlaager@wiktel.com>  Mon, 09 Jan 2012 13:34:33 -0600
+
 pidgin-ppa (0.0.5) natty; urgency=low
 
   * Correct LinuxMint 10 & 11 support
