@@ -5,7 +5,8 @@ Maintainer: Richard Laager <rlaager@pidgin.im>
 Build-Depends: debhelper (>= 7.0.50~)
 Standards-Version: 3.8.4
 Homepage: http://pidgin.im/download/ubuntu
-Vcs-Git: ssh://mtn.pidgin.im/srv/git/pidgin-ppa
+Vcs-Git: git://github.com/rlaager/pidgin-ppa.git
+Vcs-Browser: https://github.com/rlaager/pidgin-ppa
 
 Package: pidgin-ppa
 Architecture: all
