@@ -43,7 +43,7 @@ if [ "$1" = "configure" ]; then
             ;;
     esac
 
-    apt-key add /usr/share/pidgin-ppa/pidgin-ppa.asc
+    apt-key add /usr/share/pidgin-ppa/pidgin-ppa.asc >/dev/null
 
     # If the user has source downloads setup for anything, including this PPA,
     # set them up here.
