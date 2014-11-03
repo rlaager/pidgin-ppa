@@ -5,17 +5,3 @@ Description: Unsupported distribution
  .
  You should either contact ${DISTRIB_ID} support about newer versions of
  Pidgin or compile Pidgin from source.
- .
- If ${DISTRIB_ID} is binary compatible with Ubuntu, please use the
- support@pidgin.im mailing list to help develop a mapping table between
- ${DISTRIB_ID} releases and the underlying Ubuntu releases.
-
-Template: pidgin-ppa/unsupported_distro_version
-Type: note
-Description: Unsupported distribution version
- While ${DISTRIB_ID} is supported by the Pidgin PPA, you are running version
- ${DISTRIB_RELEASE}, which is not.
- .
- If this is an old version of ${DISTRIB_ID}, it's probably reached its
- end-of-life.  If it's a new version, please use the support@pidgin.im mailing
- list to ask for an update to the pidgin-ppa package.

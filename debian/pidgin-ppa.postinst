@@ -4,38 +4,12 @@
 . /usr/share/debconf/confmodule
 
 if [ "$1" = "configure" ]; then
-    # This has to match the similar code in pidgin-ppa.config.
-    #
     # Note that when an unsupported distro is detected, this postinst exits
     # successfully so users don't have to use low-level commands to unbreak
     # their system (i.e. remove this package).
     . /etc/lsb-release
     case $DISTRIB_ID in
         Ubuntu)
-            # No mapping necessary.
-            ;;
-        LinuxMint)
-            case $DISTRIB_RELEASE in
-                13)
-                    DISTRIB_CODENAME=precise
-                    ;;
-                12)
-                    DISTRIB_CODENAME=oneiric
-                    ;;
-                11)
-                    DISTRIB_CODENAME=natty
-                    ;;
-                10)
-                    DISTRIB_CODENAME=maverick
-                    ;;
-                9)
-                    DISTRIB_CODENAME=lucid
-                    ;;
-                *)
-                    # Unsupported
-                    exit 0
-                    ;;
-            esac
             ;;
         *)
             # Unsupported
