@@ -3,7 +3,7 @@ Section: net
 Priority: extra
 Maintainer: Richard Laager <rlaager@pidgin.im>
 Build-Depends: debhelper (>= 7.0.50~)
-Standards-Version: 3.9.1
+Standards-Version: 3.9.6
 Homepage: http://pidgin.im/download/ubuntu
 Vcs-Git: git://github.com/rlaager/pidgin-ppa.git
 Vcs-Browser: https://github.com/rlaager/pidgin-ppa
